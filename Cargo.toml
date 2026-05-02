@@ -1,0 +1,24 @@
+[package]
+name = "setch"
+version = "0.2.0"
+edition = "2024"
+description = "A lightweight, configurable system fetch tool written in Rust"
+license = "MIT"
+repository = "https://github.com/VoidCore3409/Setch"
+readme = "README.md"
+
+[dependencies]
+shellexpand = "3.1.2"
+inquire = "0.9.4"
+base64 = "0.22.1"
+ecliptic = "0.2.2"
+mlua = { version = "0.12.0-rc.1", features = ["lua54", "vendored"] }
+owo-colors = "4.3.0"
+toml = "1.1.2"
+serde = { version = "1.0.228", features = ["derive"] }
+[profile.release]
+opt-level = 3
+lto = "fat"          # Full Link Time Optimization (huge speed boost!)
+codegen-units = 1    # Gives the compiler a "god-view" of the whole project
+panic = "abort"      # Removes unwinding code, making the binary tiny and fast
+strip = true         # Removes all debug symbols for a leaner binary
