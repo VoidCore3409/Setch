@@ -29,6 +29,17 @@
 cargo install setch
 ```
 
+setch needs the SQLite development library to build on Linux:
+
+```bash
+# Debian / Ubuntu
+sudo apt install libsqlite3-dev
+# Fedora
+sudo dnf install sqlite-devel
+# Arch
+sudo pacman -S sqlite
+```
+
 Or build from source:
 
 ```bash
@@ -181,7 +192,7 @@ With `fetch_mode = "auto"` (default), setch will use the daemon if it's running 
 | `custom` | Static custom key-value |
 | `command` | Output of a shell command |
 
-See [docs/modules.md](docs/modules.md) for all available format tokens per module.
+See [Modules.md](Modules.md) for all available format tokens per module.
 
 ---
 

@@ -1,1 +1,9 @@
 /target
+
+# Editor settings
+.idea/
+
+# Profiling output
+flamegraph.svg
+*.svg.tmp
+perf.data*

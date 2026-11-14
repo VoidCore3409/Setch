@@ -47,7 +47,7 @@ modules = {
 }
 ```
 
-Available format tokens vary per module. See [docs/modules.md](docs/modules.md) for the full list.
+Available format tokens vary per module. See [Modules.md](Modules.md) for the full list.
 
 #### Richer Display Info
 The `resolution` module is now the `Display` module and shows:
